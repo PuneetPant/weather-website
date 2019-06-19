@@ -24,7 +24,7 @@ weatherForm.addEventListener('submit' , (e)=>{
         }
         else{
             message1.innerHTML = data.location;
-            message2.innerHTML = "Summary: "+data.forecast.summary +"<br />" +"Temperature: " + data.forecast.temperature+"<br />" +"Rain Chances : " + data.forecast.rain +"%";
+            message2.innerHTML = "Summary : "+data.forecast.summary +"<br />" +"Temperature : " + data.forecast.temperature+"<br />" +"Rain Chances : " + data.forecast.rain +"%"+"<br />"+"Highest Temperature of the Day : "+data.forecast.temperatureHigh+"<br />"+"Lowest Temperature of the Day : "+data.forecast.temperatureLow;
         }
     })
 })

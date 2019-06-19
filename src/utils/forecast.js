@@ -13,10 +13,14 @@ const forecast = (latitude,longitude , callback)=>{
             callback('Unable to find location!' , undefined);
         }
         else{
+            console.log(response.body.daily.data[0].temperatureHigh);
             callback(undefined , {
+                
                 summary : response.body.daily.data[0].summary,
                 temperature : response.body.currently.temperature ,
-                rain : response.body.currently.precipProbability
+                rain : response.body.currently.precipProbability,
+                temperatureHigh : response.body.daily.data[0].temperatureHigh,
+                temperatureLow : response.body.daily.data[0].temperatureLow
             })
         }
     })
